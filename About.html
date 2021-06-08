@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> EngineersHere</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="icon" href="ap.1.png">
+    <style>
+ 
+html, body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+   font-family: 'Roboto Condensed', sans-serif;
+  line-height: 1.7;
+  perspective-origin: 0% 50%;
+  perspective: 800px;
+  background: #21212d;
+    
+}
+nav, main {
+  transition: transform 150ms ease-out;
+}
+nav {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16em;
+  background-color: #353441;
+  transform: translateX(-16em);
+}
+nav.menu-active {
+  transform: translateX(0);
+}
+nav.menu-hover {
+  transform: translateX(-15em);
+}
+nav h1 {
+  z-index: 100;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -65px;
+  height: 60px;
+  width: 65px;
+  line-height: 60px;
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #353441;
+  cursor: pointer;
+}
+nav h1:hover {
+  color: #353441;
+  background: #fff;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: inline-block;
+  padding: 0 1em;
+  width: 100%;
+  height: 60px;
+  color: #9dc6d1;
+  line-height: 60px;
+  background-color: #353441;
+    transition: all 0.5s ease-in;
+}
+nav a:nth-of-type(2n) {
+  background-color: #3a3947;
+}
+nav a:hover {
+  background: ORANGERED;
+    color: white;
+     
+}
+main {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(do\ more.jpg);
+  transform-origin: 0% 50%;
+    background-size: cover;
+}
+main:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, transparent, rgba(33, 33, 45, .5));
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 150ms ease-out, visibility 0s 150ms;
+}
+main.menu-active {
+  border-radius: 0.001px;
+  transform: translateX(16em) rotateY(15deg);
+}
+main.menu-active:after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 150ms ease-out, visibility 0s;
+}
+main.menu-hover {
+  border-radius: 0.001px;
+  transform: translateX(1em) rotateY(1deg);
+}
+main section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 1em 4em;
+  max-width: 680px;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, .5);
+}
+section h1 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+section p {
+  display: inline-block;
+  margin: 16px 0;
+}
+
+    
+    </style>
+</head>
+<body>
+  <form name="" method="" action="">
+    <input name="ap" type="image" src="ap.1.png" height="160px" width="160px">
+</form>
+    <nav class="menu-activea">
+      <h1>NAVBAR</h1>
+      <ul>
+        <a href="HOME.html">HOME</a>
+       <a href="SERVICE.html">SERVICE</a>
+      <a href="contact.html">CONTACT US</a>
+        <a href="login.html">LOGOUT</a>
+      </ul>
+    </nav>
+<main>
+  <section>
+   <br><br><br>
+    <h1>&larr; About us.</h1>
+    
+    <br>
+    <p>The Engineering Services Examination (ESE) is conducted to recruit officers for the services which cater to the technical functions of the Government of India in the field of engineering. Many candidates take the exams, competing for a limited number of posts. Officers are selected by the union government on the recommendation of the Union Public Service Commission (UPSC). A three-stage competitive examination (preliminary, main and personality tests), the Engineering Services Examination (ESE), is conducted by the UPSC for recruitment to the Engineering Services.[1][example needed]
+
+      Officers recruited through ESE are mandated to manage and conduct activities in diverse technical fields.
+      
+      Government spending makes up over 15 percent of India's gross domestic product in a broad segment of the economy and infrastructure, including railways, roads, defense, manufacturing, inspection, supply, construction, public works, power, and telecommunications.[2] Appointments to Group A[vague]services are made by the President of India, and appointments to Group B services are made by a competent authority of the relevant department.</p>
+     
+    
+    <p>Customers across diverse industries turn to Cyient to solve complex engineering challenges. From helping to design a new-generation aircraft engine that delivers game-changing environmental performance, to contributing a quarter of the rolling stock engineering effort for a flagship rail program, to developing a 100-ton cross-terrain truck crane for market in record time, we share our customers’ passion for engineering excellence.
+
+      We have an engineering DNA and are problem solvers by nature. We apply our domain and technical expertise to help customers design, build and maintain world-class products. Our core engineering capabilities, focus on technology and innovation, and passion for excellence help us create value for some of the most respected brands in their respective industries..</p>
+     
+  </section>
+</main>
+<script>
+    (function() {
+
+  var nav = $('nav'),
+    menu = $('nav h1'),
+    main = $('main'),
+  	open = false,
+  	hover = false;
+
+  menu.on('click', function() {
+		open = !open ? true : false;
+    nav.toggleClass('menu-active');
+    main.toggleClass('menu-active');
+    nav.removeClass('menu-hover');
+    main.removeClass('menu-hover');
+    console.log(open);
+  });
+  menu.hover( 
+    function() {
+      if (!open) {
+      	nav.addClass('menu-hover');
+      	main.addClass('menu-hover');
+      }
+    }, function() {
+      nav.removeClass('menu-hover');
+      main.removeClass('menu-hover');
+    }
+  );
+
+})();
+    
+</script>
+<div class="nav_down">
+  <div>
+      &copy; EngineersHere, Site Created and designed by AR group.
+  </div>
+</body>
+</html>

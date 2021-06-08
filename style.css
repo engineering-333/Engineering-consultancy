@@ -1,0 +1,104 @@
+
+
+
+body{
+ width: 100%;
+height:100vh ;
+
+background: url(login.2.jfif);
+background-size: cover;
+background-repeat: no-repeat;
+background-size:cover;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+.main_content{
+width: 500px;
+height: 410px;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+backdrop-filter: blur(8px);
+box-shadow: 0 15px 40px -10px rgba(0,0,0,0.825);
+-webkit-transform: translate(-50%,-50%);
+-moz-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+}
+.box .img_box{
+display: flex;
+justify-content: space-between;
+position: absolute;
+top: 0.00001%;
+left: 36%;
+width: 150px;
+height: 80px;
+}
+.box .img_box img{
+    margin-top: -70px;
+width: 100%;
+object-fit: cover;
+ border-radius: 50%;
+-webkit-border-radius:50%;
+-moz-border-radius:50%;
+-ms-border-redius:50%;
+-o-border-radius:50%;
+}
+
+
+form{
+    height: 100%;
+width: 100%;
+margin-top: 10px;
+}
+
+form.group{
+
+
+    padding:5px 0;
+}
+input[ type ="text"],
+input[ type="email"],
+input[ type="password"],
+input[ type="text"]{
+width: 95%;
+height: 40px;
+border: none;
+outline: none;
+padding: 5px 10px;
+ }
+
+ label{
+     font-size: 14px;
+     color: #333;
+}
+Title{
+font-style: italic;
+color: rgb(83, 148, 148);
+
+}
+
+button{
+width: 100%;
+height: 100%;
+background: #c7ab5d;
+font-size: 16px;
+color: #000; 
+letter-spacing:2px ;
+font-weight: 700;
+transition: 5s;
+cursor: pointer;
+padding: 13px 30px;
+border: orange;
+
+}
+
+
+
+
+
